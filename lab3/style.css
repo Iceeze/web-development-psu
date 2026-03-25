@@ -1,0 +1,227 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 40px 0 20px;
+    color: #007bff;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav a:hover, nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+.news-section, .promo-section {
+    margin-bottom: 40px;
+}
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card-item {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.promo-item {
+    border: 2px solid #28a745;
+    background: #eaffea;
+}
+
+.news-item {
+    border-left: 5px solid #007bff;
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    list-style: none;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.service-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.doctor-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.doctor-photo {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    background: #ccc;
+}
+
+.doctor-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.doctor-name { 
+    font-weight: bold; 
+    font-size: 1.2rem;
+    margin-bottom: 5px; 
+}
+.doctor-spec { 
+    color: #007bff; 
+    margin-bottom: 10px; 
+}
+.doctor-desc { 
+    font-size: 0.9rem; 
+    color: #666; 
+}
+
+.schedule-wrapper { 
+    overflow-x: auto; 
+}
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-top: 10px; 
+}
+th, td { 
+    border: 1px solid #ddd; 
+    padding: 15px; 
+    text-align: center; 
+}
+th { 
+    background-color: #007bff; 
+    color: white; 
+}
+tr:nth-child(even) { 
+    background-color: #f2f2f2; 
+}
+
+.contacts-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+.contact-block { 
+    flex: 1; 
+    min-width: 300px; 
+}
+.geo-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+.geo-btn:hover { 
+    background-color: #218838; 
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+
+
+@media (max-width: 768px) {
+    .header-content { flex-direction: column; gap: 15px; }
+    nav ul { flex-wrap: wrap; justify-content: center; }
+}
