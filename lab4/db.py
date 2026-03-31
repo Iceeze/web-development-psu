@@ -12,8 +12,8 @@ def setup_database():
         CREATE TABLE IF NOT EXISTS vacancies (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             title TEXT,
-            salary TEXT,
-            company TEXT
+            company TEXT,
+            experience TEXT
         )
     """
     )
