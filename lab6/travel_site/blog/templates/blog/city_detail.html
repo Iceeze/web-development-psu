@@ -1,0 +1,21 @@
+{% extends 'blog/index.html' %}
+
+{% block content %}
+    <h1>Достопримечательности города {{ city.name }}</h1>
+    
+    {% if attractions %}
+        <ul class="attractions-list">
+            {% for attraction in attractions %}
+                <li class="attraction-item">
+                    <span>{{ attraction.name }}</span>
+                    <br>
+                    <span style="color: #555;">{{ attraction.address }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Пока нет добавленных достопримечательностей.</p>
+    {% endif %}
+    
+    <p><a href="{% url 'cities_list' %}" class="back-link">← Назад к списку городов</a></p>
+{% endblock %}

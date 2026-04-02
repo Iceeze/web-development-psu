@@ -1,0 +1,11 @@
+{% extends 'blog/index.html' %}
+
+{% block content %}
+    <h1>{{ post.title }}</h1>
+    <p style="color: gray;">Опубликовано: {{ post.created_at|date:"d.m.Y" }}</p>
+    <div>
+        {{ post.content|linebreaks }}
+    </div>
+    <br>
+    <a class="back-link" href="{% url 'home' %}">← Назад к списку</a>
+{% endblock %}

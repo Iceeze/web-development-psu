@@ -1,0 +1,12 @@
+{% extends 'blog/index.html' %}
+
+{% block content %}
+    <h1>Города для посещения</h1>
+    <ul class="cities-grid">
+        {% for city in cities %}
+            <li class="city-card">
+                <a href="{% url 'city_detail' slug=city.slug %}">{{ city.name }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
