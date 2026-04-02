@@ -1,0 +1,26 @@
+{% extends 'blog/index.html' %}
+
+{% block content %}
+    <h1>Доступные туры</h1>
+    
+    <div class="tours-grid">
+        {% for tour in tours %}
+            <div class="tour-card">
+                <h3 style="margin-top: 0; color: #2c3e50;">{{ tour.title }}</h3>
+                <p><strong>Длительность:</strong> {{ tour.duration }}</p>
+                <p><strong>Цена:</strong> {{ tour.price }} руб.</p>
+                <p style="color: #555;">{{ tour.description }}</p>
+            </div>
+        {% empty %}
+            <p>Сейчас нет доступных туров.</p>
+        {% endfor %}
+    </div>
+    
+    <style>
+        @media (max-width: 768px) {
+            div[style*="grid-template-columns: 1fr 1fr"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+{% endblock %}

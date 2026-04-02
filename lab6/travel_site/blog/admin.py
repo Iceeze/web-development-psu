@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Page, Post, City, Attraction
+from .models import Page, Post, City, Attraction, Tour
 
 admin.site.register(Page)
 admin.site.register(Post)
@@ -15,3 +15,5 @@ class CityAdmin(admin.ModelAdmin):
 class AttractionAdmin(admin.ModelAdmin):
     list_display = ("name", "city", "address")
     list_filter = ("city",)
+
+admin.site.register(Tour)

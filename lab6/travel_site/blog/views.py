@@ -1,10 +1,20 @@
 from django.shortcuts import render, get_object_or_404
-from .models import City, Post, Page
+from .models import City, Post, Page, Tour
 
 
 def home(request):
+    page = get_object_or_404(Page, slug="home")
+    return render(request, "blog/home.html", {"page": page})
+
+
+def about_page(request):
+    page = get_object_or_404(Page, slug="about")
+    return render(request, "blog/about.html", {"page": page})
+
+
+def posts_list(request):
     posts = Post.objects.all().order_by("-created_at")
-    return render(request, "blog/home.html", {"posts": posts})
+    return render(request, "blog/posts_list.html", {"posts": posts})
 
 
 def post_detail(request, post_id):
@@ -30,6 +40,6 @@ def city_detail(request, slug):
     )
 
 
-def about_page(request):
-    page = get_object_or_404(Page, slug="about")
-    return render(request, "blog/about.html", {"page": page})
+def tours_list(request):
+    tours = Tour.objects.all()
+    return render(request, 'blog/tours.html', {'tours': tours})

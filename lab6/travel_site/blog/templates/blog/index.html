@@ -13,7 +13,8 @@
         <nav>
             <div class="logo"><a href="{% url 'home' %}">TravelBlog</a></div>
             <ul>
-                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li><a href="{% url 'posts_list' %}">Блог</a></li>
+                <li><a href="{% url 'tours' %}">Туры</a></li>
                 <li><a href="{% url 'cities_list' %}">Достопримечательности</a></li>
                 <li><a href="{% url 'about' %}">О нас</a></li>
             </ul>
@@ -29,8 +30,8 @@
             <h3>Текущее время</h3>
             <div id="clock">Загрузка...</div>
 
-            <h3>Популярные места</h3>
-            <div id="slider">Париж</div>
+            <h3>Тематики</h3>
+            <div id="slider">Туры</div>
         </aside>
     </div>
 
@@ -39,7 +40,7 @@
             document.getElementById('clock').innerText = new Date().toLocaleString('ru-RU');
         }, 1000);
 
-        const slides = ["Париж", "Рим", "Токио", "Алтай"];
+        const slides = ["Туры", "Блоги", "Города", "Гайды"];
         const colors = ["#ffadad", "#ffd6a5", "#caffbf", "#9bf6ff"];
         let currentSlide = 0;
         setInterval(() => {

@@ -43,3 +43,13 @@ class Attraction(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Tour(models.Model):
+    title = models.CharField(max_length=200, verbose_name="Название тура")
+    description = models.TextField(verbose_name="Описание тура")
+    duration = models.CharField(max_length=50, verbose_name="Длительность")
+    price = models.IntegerField(verbose_name="Цена")
+
+    def __str__(self):
+        return self.title
