@@ -22,22 +22,22 @@ require_once 'includes/header.php';
     <section>
         <h2>Запись на прием</h2>
         
-        <div class="card-item" style="max-width: 500px; margin: 0 auto; padding: 30px;">
+        <div class="card-item appointment-card">
             <?php if (isset($_GET['success'])): ?>
-                <div style="background: #eaffea; border: 2px solid #28a745; padding: 15px; margin-bottom: 20px; border-radius: 5px; text-align: center;">
+                <div class="success-message">
                     <strong>Спасибо!</strong> Вы успешно записаны. Мы ждем вас.
                 </div>
             <?php endif; ?>
 
-            <form action="appointment.php" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            <form action="appointment.php" method="POST" class="appointment-form">
                 <div>
-                    <label style="font-weight: bold; display: block; margin-bottom: 5px;">Ваше ФИО:</label>
-                    <input type="text" name="patient_name" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                    <label class="form-label">Ваше ФИО:</label>
+                    <input type="text" name="patient_name" required class="form-input">
                 </div>
                 
                 <div>
-                    <label style="font-weight: bold; display: block; margin-bottom: 5px;">Специалист:</label>
-                    <select name="doctor_spec" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                    <label class="form-label">Специалист:</label>
+                    <select name="doctor_spec" required class="form-input">
                         <option value="Терапевт">Терапевт</option>
                         <option value="Кардиолог">Кардиолог</option>
                         <option value="Хирург">Хирург</option>
@@ -46,11 +46,11 @@ require_once 'includes/header.php';
                 </div>
                 
                 <div>
-                    <label style="font-weight: bold; display: block; margin-bottom: 5px;">Желаемая дата:</label>
-                    <input type="date" name="appointment_date" required style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+                    <label class="form-label">Желаемая дата:</label>
+                    <input type="date" name="appointment_date" required class="form-input">
                 </div>
                 
-                <button type="submit" class="geo-btn" style="width: 100%; margin-top: 10px;">Подтвердить запись</button>
+                <button type="submit" class="geo-btn submit-btn">Подтвердить запись</button>
             </form>
         </div>
     </section>

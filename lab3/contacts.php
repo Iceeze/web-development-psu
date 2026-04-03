@@ -16,7 +16,7 @@
                 
                 <p>Нажмите кнопку ниже, чтобы построить маршрут:</p>
                 <button class="geo-btn" onclick="getLocation()">Найти меня</button>
-                <p id="geo-result" style="margin-top: 15px; font-weight: bold;"></p>
+                <p id="geo-result"></p>
             </div>
         </div>
     </section>
@@ -47,7 +47,7 @@
         
         document.getElementById("geo-result").innerHTML = 
             `Ваши координаты:<br>Широта: ${lat.toFixed(4)}, Долгота: ${lon.toFixed(4)}<br>` +
-            `<a href="${mapLink}" target="_blank" style="color: var(--primary-color);">Открыть маршрут на карте</a>`;
+            `<a href="${mapLink}" target="_blank">Открыть маршрут на карте</a>`;
     }
 
     function showError(error) {

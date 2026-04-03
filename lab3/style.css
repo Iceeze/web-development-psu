@@ -220,6 +220,71 @@ footer {
     margin-top: auto;
 }
 
+.success-message {
+    background: #eaffea;
+    border: 2px solid #28a745;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.appointment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.geo-btn.submit-btn,
+.submit-btn {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.appointment-card {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.today-date {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #007bff;
+    font-size: 1.2rem;
+}
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hr-spacing {
+    margin: 20px 0;
+}
+
+#geo-result {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
 
 @media (max-width: 768px) {
     .header-content { flex-direction: column; gap: 15px; }

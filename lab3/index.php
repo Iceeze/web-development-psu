@@ -15,12 +15,12 @@ require_once 'includes/header.php';
 ?>
 
 <div class="container">
-    <div style="text-align: center; margin-top: 20px; font-weight: bold; color: #007bff; font-size: 1.2rem;">
+    <div class="today-date">
         Сегодня: <?= $currentDate ?> (<?= $currentDay ?>)
     </div>
 
     <h1>Добро пожаловать в наш медицинский центр!</h1>
-    <p style="text-align: center; margin-bottom: 40px; max-width: 800px; margin-left: auto; margin-right: auto;">
+    <p class="intro-text">
         Мы используем современное оборудование и доказательную медицину. Ниже вы можете ознакомиться с нашими текущими выгодными предложениями и последними новостями из жизни клиники.
     </p>
 
